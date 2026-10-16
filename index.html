@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Save the Date | Groom &amp; Bride</title>
+<meta name="description" content="Save the Date for the wedding celebration of Groom &amp; Bride – November 19, 2026">
+<meta name="theme-color" content="#0d1410">
+
+<!-- Open Graph / WhatsApp / Facebook / Instagram link preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Save the Date | Groom &amp; Bride">
+<meta property="og:description" content="Save the Date for the wedding celebration of Groom &amp; Bride – November 19, 2026">
+<meta property="og:image" content="assets/bg.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Save the Date | Groom &amp; Bride">
+<meta name="twitter:description" content="Save the Date for the wedding celebration of Groom &amp; Bride – November 19, 2026">
+<meta name="twitter:image" content="assets/bg.jpg">
+
+<!-- Favicon & Preloads -->
+<link rel="icon" type="image/png" href="assets/car.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/bg.jpg">
+<link rel="preload" as="image" href="assets/car.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--bg:url(assets/bg.jpg);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html,body{height:100%;height:100dvh;margin:0;background:#0d1410}
+body{display:grid;place-items:center;overflow:hidden}
+.stage{position:relative;width:100%;max-width:520px;height:100%;overflow:hidden;background:#2a3a24;--rw:200px;--rl:100px;--rr:300px;user-select:none;-webkit-user-select:none}
+@media(min-width:700px){.stage{max-height:920px;border-radius:22px;box-shadow:0 20px 60px #000a}}
+.ly{position:absolute;inset:0;background:var(--bg) center/cover no-repeat}
+/* gentle tree sway: copies of the background, pivoting at the road edge, faded into the base */
+.sl{transform-origin:var(--rl) 50%;-webkit-mask-image:linear-gradient(to right,#000,#000 calc(var(--rl) - var(--rw)*.06),#0000 calc(var(--rl) + var(--rw)*.02));mask-image:linear-gradient(to right,#000,#000 calc(var(--rl) - var(--rw)*.06),#0000 calc(var(--rl) + var(--rw)*.02));animation:swl 6.5s ease-in-out infinite alternate;will-change:transform}
+.sr{transform-origin:var(--rr) 50%;-webkit-mask-image:linear-gradient(to left,#000,#000 calc(100% - var(--rr) - var(--rw)*.06),#0000 calc(100% - var(--rr) + var(--rw)*.02));mask-image:linear-gradient(to left,#000,#000 calc(100% - var(--rr) - var(--rw)*.06),#0000 calc(100% - var(--rr) + var(--rw)*.02));animation:swr 7.5s ease-in-out infinite alternate;will-change:transform}
+@keyframes swl{from{transform:rotate(-.4deg) scale(1.008)}to{transform:rotate(.4deg) scale(1.014)}}
+@keyframes swr{from{transform:rotate(.4deg) scale(1.014)}to{transform:rotate(-.4deg) scale(1.008)}}
+.shade{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,#0000 55%,#0007 100%),#0000001a}
+.L{position:absolute;left:0;right:0;display:flex;justify-content:center;transform:translateY(-50%);pointer-events:none}
+.t{display:block;white-space:nowrap;color:#fff8ef;text-shadow:0 1px 2px #0009,0 2px 14px #000b}
+.n .t{opacity:0}
+.sc{font-family:'Great Vibes',cursive;line-height:1.1}
+.sf{font-family:'Cormorant Garamond',Georgia,serif}
+.car{position:absolute;left:0;top:0;width:calc(var(--rw)*.62);left:calc(50% - var(--rw)*.31);transform:translateY(-130%);will-change:transform}
+.car img{display:block;width:100%;height:auto;filter:drop-shadow(0 calc(var(--rw)*.05) calc(var(--rw)*.07) #000a)}
+button{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:5;font:600 14px/1 system-ui,sans-serif;color:#fff8ef;background:#0008;border:1px solid #fff5;border-radius:99px;padding:10px 16px;cursor:pointer;backdrop-filter:blur(6px)}
+@media(prefers-reduced-motion:reduce){.sl,.sr{animation:none}}
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+<div class="ly"></div>
+<div class="ly sl"></div>
+<div class="ly sr"></div>
+<div class="shade"></div>
+
+<!-- EDIT HERE: first text (disappears under the car). top = vertical position in % -->
+<div class="L o" style="top:35%"><span class="t sc" style="font-size:calc(var(--rw)*.27)">Save the</span></div>
+<div class="L o" style="top:44%"><span class="t sc" style="font-size:calc(var(--rw)*.36)">Date</span></div>
+
+<!-- EDIT HERE: second text (fades in after the car has covered the first) -->
+<div class="L n" style="top:29%"><span class="t sf" style="font-size:calc(var(--rw)*.30);font-weight:600">Nov 19</span></div>
+<div class="L n" style="top:36%"><span class="t sf" style="font-size:calc(var(--rw)*.095);letter-spacing:.32em">2026</span></div>
+<div class="L n" style="top:44%"><span class="t sf" style="font-size:calc(var(--rw)*.088);font-style:italic">For the wedding celebration of</span></div>
+<div class="L n" style="top:52%"><span class="t sc" style="font-size:calc(var(--rw)*.24)">Groom</span></div>
+<div class="L n" style="top:58%"><span class="t sf" style="font-size:calc(var(--rw)*.13)">&amp;</span></div>
+<div class="L n" style="top:64.5%"><span class="t sc" style="font-size:calc(var(--rw)*.24)">Bride</span></div>
+
+<div class="car" id="carWrap"><img id="car" alt="" src="assets/car.png"></div>
+</div>
+<button id="replay" aria-label="Replay animation">↻ Replay</button>
+<script>
+(function(){
+var st=document.getElementById('stage'),wrap=document.getElementById('carWrap'),car=document.getElementById('car'),
+olds=[].slice.call(document.querySelectorAll('.o')),news=[].slice.call(document.querySelectorAll('.n')),
+D=7500,START=1300,anims=[];
+function layout(){
+var sw=st.clientWidth,sh=st.clientHeight,bgW=Math.max(sw,sh*1024/1536),rw=.35*bgW;
+st.style.setProperty('--rw',rw+'px');st.style.setProperty('--rl',(sw/2-rw/2)+'px');st.style.setProperty('--rr',(sw/2+rw/2)+'px')}
+function cy(el){var r=el.getBoundingClientRect(),s=st.getBoundingClientRect();return r.top-s.top+r.height/2}
+function play(){
+anims.forEach(function(a){a.cancel()});anims=[];layout();
+var H=st.clientHeight,
+h=wrap.offsetHeight||(car.naturalWidth?car.naturalHeight*(parseFloat(getComputedStyle(st).getPropertyValue('--rw'))*.62)/car.naturalWidth:275),
+span=H+h,lastEnd=0;
+// car: top of screen -> bottom, front pointing down, then out of frame
+anims.push(wrap.animate([{transform:'translateY('+(-h)+'px)'},{transform:'translateY('+H+'px)'}],{duration:D,delay:START,easing:'linear',fill:'both'}));
+anims.push(car.animate([{transform:'translateX(-.6px)'},{transform:'translateX(.6px)'}],{duration:900,direction:'alternate',iterations:Infinity,easing:'ease-in-out'}));
+// first text vanishes while the car covers it (front edge reaches line -> car centre over line)
+olds.forEach(function(el){
+var c=cy(el),t1=D*c/span,t2=D*(c+h/2)/span;
+anims.push(el.firstChild.animate([{opacity:1},{opacity:0}],{duration:Math.max(t2-t1,200),delay:START+t1,fill:'both'}));
+lastEnd=Math.max(lastEnd,START+t2)});
+// new text rises out of the background, line by line, once the old text is gone
+news.forEach(function(el,i){
+anims.push(el.firstChild.animate([{opacity:0,filter:'blur(8px)',transform:'scale(1.07)'},{opacity:1,filter:'blur(0)',transform:'scale(1)'}],{duration:1100,delay:lastEnd+150+i*420,easing:'ease-out',fill:'both'}))})
+}
+document.getElementById('replay').onclick=play;
+var ready=[document.fonts&&document.fonts.ready,new Promise(function(r){if(car.complete&&car.naturalWidth)r();else{car.onload=r;car.onerror=r}})];
+Promise.all(ready).then(play);
+var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(play,250)});
+})();
+</script>
+</body>
+</html>
