@@ -44,6 +44,30 @@ body{display:grid;place-items:center;overflow:hidden}
 .n .t{opacity:0}
 .sc{font-family:'Great Vibes',cursive;line-height:1.1}
 .sf{font-family:'Cormorant Garamond',Georgia,serif}
+.rot{z-index:2}
+.rot .t{transform:rotate(90deg);transform-origin:center center;display:inline-flex;align-items:center;letter-spacing:.02em}
+.rot-swash::before,
+.rot-swash::after{
+  content:'';
+  display:inline-block;
+  width:calc(var(--rw)*.42);
+  height:calc(var(--rw)*.12);
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
+  vertical-align:middle;
+  filter:drop-shadow(0 1px 2px #0009) drop-shadow(0 2px 10px #000b);
+}
+.rot-swash::before{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 30' fill='none'%3E%3Cpath d='M2,15 C45,15 70,8 100,20 C118,27 128,21 138,13' stroke='%23fff8ef' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E");
+  margin-right:calc(var(--rw)*.02);
+  transform:translateY(calc(var(--rw)*.01));
+}
+.rot-swash::after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 30' fill='none'%3E%3Cpath d='M2,13 C18,22 48,6 85,15 C120,24 142,18 158,15' stroke='%23fff8ef' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E");
+  margin-left:calc(var(--rw)*.02);
+  transform:translateY(calc(var(--rw)*.01));
+}
 .car{position:absolute;left:0;top:0;width:calc(var(--rw)*.62);left:calc(50% - var(--rw)*.31);transform:translateY(-130%);will-change:transform}
 .car img{display:block;width:100%;height:auto;filter:drop-shadow(0 calc(var(--rw)*.05) calc(var(--rw)*.07) #000a)}
 button{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:5;font:600 14px/1 system-ui,sans-serif;color:#fff8ef;background:#0008;border:1px solid #fff5;border-radius:99px;padding:10px 16px;cursor:pointer;backdrop-filter:blur(6px)}
@@ -57,9 +81,8 @@ button{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0
 <div class="ly sr"></div>
 <div class="shade"></div>
 
-<!-- EDIT HERE: first text (disappears under the car). top = vertical position in % -->
-<div class="L o" style="top:35%"><span class="t sc" style="font-size:calc(var(--rw)*.27)">Save the</span></div>
-<div class="L o" style="top:44%"><span class="t sc" style="font-size:calc(var(--rw)*.36)">Date</span></div>
+<!-- EDIT HERE: first text (disappears under the car). Rotated along the road with flourishes matching attached design -->
+<div class="L o rot" style="top:52%"><span class="t sc rot-swash" style="font-size:calc(var(--rw)*.23)">save the date</span></div>
 
 <!-- EDIT HERE: second text (fades in after the car has covered the first) -->
 <div class="L n" style="top:29%"><span class="t sf" style="font-size:calc(var(--rw)*.30);font-weight:600">Nov 19</span></div>
@@ -91,12 +114,13 @@ anims.push(wrap.animate([{transform:'translateY('+(-h)+'px)'},{transform:'transl
 anims.push(car.animate([{transform:'translateX(-.6px)'},{transform:'translateX(.6px)'}],{duration:900,direction:'alternate',iterations:Infinity,easing:'ease-in-out'}));
 // first text vanishes while the car covers it (front edge reaches line -> car centre over line)
 olds.forEach(function(el){
-var c=cy(el),t1=D*c/span,t2=D*(c+h/2)/span;
-anims.push(el.firstChild.animate([{opacity:1},{opacity:0}],{duration:Math.max(t2-t1,200),delay:START+t1,fill:'both'}));
+var c=cy(el),t1=D*c/span,t2=D*(c+h/2)/span,target=el.firstElementChild||el.firstChild;
+anims.push(target.animate([{opacity:1},{opacity:0}],{duration:Math.max(t2-t1,200),delay:START+t1,fill:'both'}));
 lastEnd=Math.max(lastEnd,START+t2)});
 // new text rises out of the background, line by line, once the old text is gone
 news.forEach(function(el,i){
-anims.push(el.firstChild.animate([{opacity:0,filter:'blur(8px)',transform:'scale(1.07)'},{opacity:1,filter:'blur(0)',transform:'scale(1)'}],{duration:1100,delay:lastEnd+150+i*420,easing:'ease-out',fill:'both'}))})
+var target=el.firstElementChild||el.firstChild;
+anims.push(target.animate([{opacity:0,filter:'blur(8px)',transform:'scale(1.07)'},{opacity:1,filter:'blur(0)',transform:'scale(1)'}],{duration:1100,delay:lastEnd+150+i*420,easing:'ease-out',fill:'both'}))})
 }
 document.getElementById('replay').onclick=play;
 var ready=[document.fonts&&document.fonts.ready,new Promise(function(r){if(car.complete&&car.naturalWidth)r();else{car.onload=r;car.onerror=r}})];
