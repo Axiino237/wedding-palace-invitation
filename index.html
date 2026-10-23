@@ -972,8 +972,12 @@
 
     .cd-cal-box {
       top: 86.5%;
-      pointer-events: auto;
+      pointer-events: none;
       z-index: 5
+    }
+
+    #s5.on .cd-cal-box {
+      pointer-events: auto
     }
 
     .cd-cal {
@@ -1783,15 +1787,16 @@
       <div class="L o" style="top:28%"><span class="t" style="font-size:calc(var(--rw)*.36)">Save the</span></div>
       <div class="L o" style="top:37%"><span class="t" style="font-size:calc(var(--rw)*.5)">Date</span></div>
       <!-- EDIT HERE: second text (fades in after the car has covered the first) -->
-      <div class="L n" style="top:20%"><span class="t" style="font-size:calc(var(--rw)*.46)">Nov 19</span></div>
+      <div class="L n" style="top:20%"><span class="t" style="font-size:calc(var(--rw)*.46)">Oct 25</span></div>
       <div class="L n" style="top:26%"><span class="t"
           style="font-size:calc(var(--rw)*.2);letter-spacing:.25em">2026</span></div>
       <div class="L n" style="top:32%"><span class="t" style="font-size:calc(var(--rw)*.17)">For the wedding</span>
       </div>
       <div class="L n" style="top:36%"><span class="t" style="font-size:calc(var(--rw)*.17)">celebration of</span></div>
-      <div class="L n" style="top:43.5%"><span class="t" style="font-size:calc(var(--rw)*.4)">Groom</span></div>
+      <div class="L n" style="top:43.5%"><span class="t" style="font-size:calc(var(--rw)*.26)">Dr. Hariharan</span>
+      </div>
       <div class="L n" style="top:49.5%"><span class="t" style="font-size:calc(var(--rw)*.22)">&amp;</span></div>
-      <div class="L n" style="top:56%"><span class="t" style="font-size:calc(var(--rw)*.4)">Bride</span></div>
+      <div class="L n" style="top:56%"><span class="t" style="font-size:calc(var(--rw)*.26)">Dr. Bhavashree</span></div>
       <div id="c1"><img id="car1" alt="" src="assets/car.png"></div>
       <button id="tap" aria-label="Tap to begin"><i></i><b>Tap to begin</b></button>
     </div>
@@ -1808,8 +1813,8 @@
         </div>
       </div>
       <div id="vt">
-        <div id="vn">Venue Name</div>
-        <div id="vd">Nov 19 · 10:30 AM</div>
+        <div id="vn">JM Mahal</div>
+        <div id="vd">Oct 25 · 7:40 AM</div>
       </div>
       <a id="pin" target="_blank" rel="noopener" href="#"><span>Open in Maps</span><svg viewBox="0 0 40 52">
           <path d="M20 1C9.5 1 1 9.4 1 19.8 1 33 20 51 20 51s19-18 19-31.2C39 9.4 30.500 1 20 1z" fill="#f08fae"
@@ -1822,10 +1827,10 @@
     <div class="sc" id="s3">
       <div id="hall"></div>
       <div id="cp">
-        <div class="sl3" style="left:30.23%;top:8.45%;width:10.70%;height:16.68%"><span>Groom</span><img alt=""
-            src="assets/groom.jpg" onerror="this.remove()"></div>
-        <div class="sl3" style="left:53.49%;top:11.05%;width:10.42%;height:16.27%"><span>Bride</span><img alt=""
-            src="assets/bride.jpg" onerror="this.remove()"></div><img alt="" src="assets/couple.webp">
+        <div class="sl3" style="left:30.23%;top:8.45%;width:10.70%;height:16.68%"><span>Hariharan</span><img alt=""
+            src="assets/groom.png" onerror="this.remove()"></div>
+        <div class="sl3" style="left:53.49%;top:11.05%;width:10.42%;height:16.27%"><span>Bhavashree</span><img alt=""
+            src="assets/bride.png" onerror="this.remove()"></div><img alt="" src="assets/couple.webp">
         <div id="sf">
           <div class="rip">Tap</div><b>Tap to continue</b>
         </div>
@@ -1890,7 +1895,7 @@
         <div class="s6-content" id="s6-content">
 
           <!-- Section 1: RSVP -->
-          <section class="s6-sec" id="sec-rsvp">
+          <!-- <section class="s6-sec" id="sec-rsvp">
             <h2 class="s6-title">R S V P</h2>
             <i class="s6-rule"></i>
             <p class="s6-sub" id="rsvp-by-date">Kindly let us know by November 1, 2026</p>
@@ -1951,7 +1956,7 @@
                 <span>Send on WhatsApp</span>
               </a>
             </div>
-          </section>
+          </section> -->
 
           <!-- Section 2: Gallery -->
           <section class="s6-sec" id="sec-gallery">
@@ -1965,7 +1970,7 @@
 
           <!-- Section 3: Contacts, Travel & FAQ -->
           <section class="s6-sec" id="sec-contacts">
-            <h2 class="s6-title">Contacts &amp; FAQ</h2>
+            <h2 class="s6-title">Contacts</h2>
             <i class="s6-rule"></i>
 
             <!-- Contacts -->
@@ -1983,17 +1988,17 @@
             </a>
 
             <!-- FAQ -->
-            <div id="sec-faq" style="scroll-margin-top:20px">
+            <!-- <div id="sec-faq" style="scroll-margin-top:20px">
               <h3 class="sub-hd" style="margin-top:32px">Frequently Asked Questions</h3>
               <div class="acc-list" id="faq-list"></div>
-            </div>
+            </div> -->
           </section>
 
           <!-- Section 4: Thank you -->
           <section class="s6-sec" id="sec-thankyou">
             <h2 class="s6-title">Thank You</h2>
             <i class="s6-rule"></i>
-            <div class="ty-names">Groom <span>&amp;</span> Bride</div>
+            <div class="ty-names">Dr. Hariharan <span>&amp;</span> Dr. Bhavashree</div>
             <p class="ty-msg">We are deeply grateful for your love, blessings, and for being part of our story.</p>
 
             <div class="ty-car-track">
@@ -2018,10 +2023,10 @@
 
       <!-- Floating Shortcut Bar -->
       <nav class="s6-nav" id="s6-nav" aria-label="Jump to section">
-        <button type="button" data-sec="sec-rsvp" class="active">RSVP</button>
+        <!-- <button type="button" data-sec="sec-rsvp" class="active">RSVP</button> -->
         <button type="button" data-sec="sec-gallery">Gallery</button>
         <button type="button" data-sec="sec-contacts">Contacts</button>
-        <button type="button" data-sec="sec-faq">FAQ</button>
+        <!-- <button type="button" data-sec="sec-faq">FAQ</button> -->
       </nav>
     </div>
     <div id="rp"></div>
@@ -2032,13 +2037,17 @@
   <script>
     (function () {
       // EDIT HERE: events on the board (name, date, time, venue). Add or remove lines freely.
-      var EVENTS = [{ n: 'Mehendi', d: 'Nov 17', t: '4:00 PM', v: 'Venue Name' }, { n: 'Sangeet', d: 'Nov 18', t: '6:30 PM', v: 'Venue Name' }, { n: 'Wedding', d: 'Nov 19', t: '10:30 AM', v: 'Venue Name' }, { n: 'Reception', d: 'Nov 19', t: '7:00 PM', v: 'Venue Name' }];
+      var EVENTS = [{ n: 'Reception', d: 'Oct 24', t: '6:00 PM onwards', v: 'JM Mahal, Veerapandi, Theni' }, { n: 'Wedding', d: 'Oct 25', t: '7:40 - 9:00 AM', v: 'JM Mahal, Veerapandi, Theni' }];
       // EDIT HERE: venue details and Google Maps link
-      var CFG = { VENUE: 'Venue Name', DETAIL: 'Nov 19 · 10:30 AM', MAPS: 'https://www.google.com/maps/search/?api=1&query=Venue+Name', WEDDING: '2026-11-19T10:30:00+05:30', RSVP_BY: 'November 1, 2026', RSVP_URL: '', WHATSAPP: '919876543210' };
-      var GALLERY = ['assets/gallery/g1.jpg', 'assets/gallery/g2.jpg', 'assets/gallery/g3.jpg', 'assets/gallery/g4.jpg', 'assets/gallery/g5.jpg', 'assets/gallery/g6.jpg'];
-      var CONTACTS = [{ name: 'Rajesh Sharma', relation: 'Father of the Groom', phone: '+919876543210' }, { name: 'Sunita Sharma', relation: 'Mother of the Groom', phone: '+919876543211' }, { name: 'Anil Verma', relation: 'Father of the Bride', phone: '+919876543212' }];
-      var TRAVEL = [{ title: 'Getting There', text: 'The palace is 45 minutes from the airport and 20 minutes from the central station. Taxis and prepaid cabs are readily available.' }, { title: 'Where to Stay', text: 'We have reserved room blocks at the venue and nearby heritage hotels. Mention the Sharma-Verma wedding for special rates.' }, { title: 'Parking & Local Tips', text: 'Valet parking is available at the palace entrance. The weather in November is pleasant during the day and cooler in the evenings.' }];
-      var FAQ = [{ q: 'What is the dress code?', a: 'Traditional Indian or formal ethnic wear. Pastel shades for daytime events, vibrant royal colors for the evening.' }, { q: 'Are children welcome?', a: 'Yes! We would love for your entire family to join in the celebrations.' }, { q: 'Is parking available?', a: 'Complimentary valet parking is available at the palace entrance for all guests.' }, { q: 'Can we take photos and share on social media?', a: 'Feel free to capture and share moments with our wedding hashtag #GroomWedsBride.' }, { q: 'What should we know about gifts?', a: 'Your presence and blessings are the greatest gift to us. No boxed gifts, please.' }, { q: 'What will the weather be like?', a: 'Mid-November in Rajasthan brings sunny days (~26\u00b0C) and pleasantly cool evenings (~15\u00b0C). A light shawl is recommended.' }];
+      var CFG = { VENUE: 'JM Mahal', DETAIL: 'Oct 25 · 7:40 AM', MAPS: 'https://www.google.com/maps/search/?api=1&query=JM+Mahal+Veerapandi+Theni', WEDDING: '2026-10-25T07:40:00+05:30', RSVP_BY: 'November 1, 2026', RSVP_URL: '', WHATSAPP: '919876543210' };
+      var GALLERY = ['assets/gallery/IMG_8398.PNG', 'assets/gallery/IMG_8399.PNG'];
+      // Sample contacts kept for reference (fake numbers):
+      // var CONTACTS = [{ name: 'Rajesh Sharma', relation: 'Father of the Groom', phone: '+919876543210' }, { name: 'Sunita Sharma', relation: 'Mother of the Groom', phone: '+919876543211' }, { name: 'Anil Verma', relation: 'Father of the Bride', phone: '+919876543212' }];
+      var CONTACTS = [{ name: 'Hariharan', relation: 'Family contact', phone: '+918072421144' }];
+      // Safe defaults while Travel/FAQ are commented out. When you re-enable them, just uncomment the two lines below; they override these.
+      var TRAVEL = []; var FAQ = [];
+      // var TRAVEL = [{ title: 'Getting There', text: 'The palace is 45 minutes from the airport and 20 minutes from the central station. Taxis and prepaid cabs are readily available.' }, { title: 'Where to Stay', text: 'We have reserved room blocks at the venue and nearby heritage hotels. Mention the Sharma-Verma wedding for special rates.' }, { title: 'Parking & Local Tips', text: 'Valet parking is available at the palace entrance. The weather in November is pleasant during the day and cooler in the evenings.' }];
+      // var FAQ = [{ q: 'What is the dress code?', a: 'Traditional Indian or formal ethnic wear. Pastel shades for daytime events, vibrant royal colors for the evening.' }, { q: 'Are children welcome?', a: 'Yes! We would love for your entire family to join in the celebrations.' }, { q: 'Is parking available?', a: 'Complimentary valet parking is available at the palace entrance for all guests.' }, { q: 'Can we take photos and share on social media?', a: 'Feel free to capture and share moments with our wedding hashtag #GroomWedsBride.' }, { q: 'What should we know about gifts?', a: 'Your presence and blessings are the greatest gift to us. No boxed gifts, please.' }, { q: 'What will the weather be like?', a: 'Mid-November in Rajasthan brings sunny days (~26\u00b0C) and pleasantly cool evenings (~15\u00b0C). A light shawl is recommended.' }];
       function getCountdownData() {
         var target = new Date(CFG.WEDDING).getTime();
         var now = Date.now(), diff = target - now;
@@ -2053,8 +2062,8 @@
         var start = new Date(CFG.WEDDING), end = new Date(start.getTime() + 4 * 3600 * 1000);
         function toCal(d) { return d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '') }
         var dates = toCal(start) + '/' + toCal(end);
-        var text = encodeURIComponent('Wedding Celebration: Groom & Bride');
-        var details = encodeURIComponent('Wedding celebration of Groom & Bride.\nVenue: ' + CFG.VENUE + '\nLocation: ' + CFG.MAPS);
+        var text = encodeURIComponent('Wedding Celebration: Dr. Hariharan & Dr. Bhavashree');
+        var details = encodeURIComponent('Wedding celebration of Dr. Hariharan & Dr. Bhavashree.\nVenue: ' + CFG.VENUE + '\nLocation: ' + CFG.MAPS);
         var loc = encodeURIComponent(CFG.VENUE);
         return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + text + '&dates=' + dates + '&details=' + details + '&location=' + loc
       }
@@ -2113,9 +2122,20 @@
         $('fx').innerHTML = '';
         if ($('s5-stars')) $('s5-stars').innerHTML = '';
         ['tap', 'pin', 'dh', 'vt', 's3', 'sf', 's4', 's5', 's6', 'nx', 'nx5', 'bh'].forEach(function (i) { var el = $(i); if (el) el.classList.remove('on') });
+        ['s2', 's3', 's4', 's5', 's6'].forEach(function (i) { var el = $(i); if (el) { el.classList.remove('on'); el.style.visibility = ''; el.style.opacity = '' } });
         $('s1').style.display = ''; $('s2').style.visibility = 'hidden';
-        $('s3').classList.remove('on'); $('s4').classList.remove('on'); $('s5').classList.remove('on'); $('s6').classList.remove('on');
-        $('rp').style.visibility = $('rc').style.visibility = 'hidden';
+        ['rp', 'rc'].forEach(function (i) { var el = $(i); if (el) { el.style.visibility = 'hidden'; el.style.clipPath = ''; el.style.opacity = '' } });
+        if ($('world')) { $('world').style.transform = ''; $('world').style.transformOrigin = '' }
+        if ($('pal')) $('pal').style.transform = '';
+        if ($('dl')) $('dl').style.transform = '';
+        if ($('dr')) $('dr').style.transform = '';
+        if ($('road')) $('road').style.backgroundPosition = '';
+        if ($('trees')) $('trees').style.backgroundPosition = '';
+        if ($('car2')) $('car2').style.transform = '';
+        if ($('bob')) $('bob').style.transform = '';
+        if ($('pin')) { $('pin').style.transform = ''; $('pin').classList.remove('on') }
+        if ($('dh')) { $('dh').style.transform = ''; $('dh').classList.remove('on') }
+        if ($('vt')) $('vt').classList.remove('on');
         if ($('hall')) { $('hall').style.transform = ''; $('hall').style.filter = '' }
         if ($('cp')) { $('cp').style.transform = ''; $('cp').style.opacity = '' }
         if ($('ct')) $('ct').style.opacity = '';
@@ -2186,8 +2206,10 @@
         [$('rp'), $('rc')].forEach(function (el, i) { el.style.visibility = 'visible'; A(el, [{ clipPath: ck(0), opacity: 1 }, { clipPath: ck(R), opacity: 1 }], { duration: 1100, delay: i * 110, easing: 'cubic-bezier(.55,0,.25,1)', fill: 'both' }) });
         petals(cx, cy, 30);
         T(function () {
+          busy = false;
           $('s1').style.display = 'none'; $('s2').style.visibility = 'visible'; s2();
-          [$('rc'), $('rp')].forEach(function (el, i) { A(el, [{ opacity: 1 }, { opacity: 0 }], { duration: 900, delay: i * 90, fill: 'both' }) })
+          [$('rc'), $('rp')].forEach(function (el, i) { A(el, [{ opacity: 1 }, { opacity: 0 }], { duration: 900, delay: i * 90, fill: 'both' }) });
+          T(function () { $('rp').style.visibility = $('rc').style.visibility = 'hidden' }, 1000)
         }, 1250)
       }
       /* ---- scene 2 ---- */
@@ -2276,7 +2298,7 @@
         A($('s5'), [{ opacity: 1 }, { opacity: 0 }], { duration: 1200, easing: 'ease-in-out', fill: 'both' });
         T(function () { $('s5').classList.remove('on'); $('s5').style.opacity = ''; leaving = false; s6in() }, 1200)
       }
-      var curSlide = 0, galTimer = null, petalsPaused = false, guestCount = 1, rsvpAtt = '', carRan = false, revealObs = null, navObs = null, galObs = null, carObs = null;
+      var curSlide = 0, galTimer = null, petalsPaused = false, guestCount = 1, rsvpAtt = '', isSubmitting = false, carRan = false, revealObs = null, navObs = null, galObs = null, carObs = null;
       function renderEventCheckboxes() {
         var box = $('events-chks'); if (!box || box.children.length > 0) return; box.innerHTML = '';
         EVENTS.forEach(function (e) { var l = document.createElement('label'); l.className = 'chk-label'; l.innerHTML = '<input type=\"checkbox\" name=\"rsvp_ev\" value=\"' + e.n + '\" checked><span>' + e.n + ' <small style=\"color:#8a6a4e\">(' + e.d + ')</small></span>'; box.appendChild(l) })
@@ -2285,11 +2307,23 @@
         var box = $('gal-slides'), dots = $('gal-dots'); if (!box || box.children.length > 0) return; box.innerHTML = ''; dots.innerHTML = '';
         GALLERY.forEach(function (src, i) {
           var s = document.createElement('div'); s.className = 'gal-slide' + (i === 0 ? ' active' : '');
-          s.innerHTML = '<img src=\"' + src + '\" alt=\"Photo ' + (i + 1) + '\" onerror=\"this.style.display=\\\'none\\\';this.nextElementSibling.style.display=\\\'flex\\\'\"><div class=\"gal-fallback\" style=\"display:none\"><svg viewBox=\"0 0 24 24\"><path d=\"M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z\"/></svg><span>Photo ' + (i + 1) + ' Coming Soon</span></div>';
+          var img = document.createElement('img');
+          img.src = src;
+          img.alt = 'Photo ' + (i + 1);
+          img.onerror = function () {
+            this.style.display = 'none';
+            if (this.nextElementSibling) this.nextElementSibling.style.display = 'flex';
+          };
+          s.appendChild(img);
+          var fb = document.createElement('div');
+          fb.className = 'gal-fallback';
+          fb.style.display = 'none';
+          fb.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span>Photo ' + (i + 1) + ' Coming Soon</span>';
+          s.appendChild(fb);
           box.appendChild(s);
           var d = document.createElement('button'); d.className = 'gal-dot' + (i === 0 ? ' active' : ''); d.setAttribute('aria-label', 'Photo ' + (i + 1));
-          d.onclick = function (e) { e.stopPropagation(); goToSlide(i) }; dots.appendChild(d)
-        })
+          d.onclick = function (e) { e.stopPropagation(); goToSlide(i) }; dots.appendChild(d);
+        });
       }
       function goToSlide(n) {
         var slides = document.querySelectorAll('.gal-slide'), dots = document.querySelectorAll('.gal-dot');
@@ -2308,6 +2342,7 @@
       }
       function renderAccordions() {
         var tBox = $('travel-list'), fBox = $('faq-list');
+        if (tBox && !TRAVEL.length) { tBox.style.display = 'none'; var th = tBox.previousElementSibling; if (th && th.classList.contains('sub-hd')) th.style.display = 'none' }
         if (tBox && tBox.children.length === 0) {
           TRAVEL.forEach(function (t) { var d = document.createElement('details'); d.className = 'acc'; d.innerHTML = '<summary class=\"acc-sum\">' + t.title + '</summary><div class=\"acc-body\">' + t.text + '</div>'; tBox.appendChild(d) })
         }
@@ -2323,9 +2358,9 @@
       }
       function s6in() {
         renderEventCheckboxes(); renderGallery(); renderContacts(); renderAccordions();
-        $('map-pill').href = CFG.MAPS;
-        $('rsvp-by-date').textContent = 'Kindly let us know by ' + CFG.RSVP_BY;
-        var shareText = "You're invited to celebrate the wedding of Groom & Bride! View the invitation here: " + location.href;
+        if ($('map-pill')) $('map-pill').href = CFG.MAPS;
+        if ($('rsvp-by-date')) $('rsvp-by-date').textContent = 'Kindly let us know by ' + CFG.RSVP_BY;
+        var shareText = "You're invited to celebrate the wedding of Dr. Hariharan & Dr. Bhavashree! View the invitation here: " + location.href;
         $('share-wa').href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
         var root = $('s6-scroll');
         if ('IntersectionObserver' in window) {
@@ -2341,7 +2376,8 @@
         } else {
           document.querySelectorAll('.s6-sec').forEach(function (s) { s.classList.add('revealed') }); if (!galTimer) galTimer = setInterval(nextSlide, 4000)
         }
-        var firstSec = $('sec-rsvp'); if (firstSec) firstSec.classList.add('revealed')
+        var firstSec = $('sec-rsvp') || $('sec-gallery'); if (firstSec) firstSec.classList.add('revealed');
+        var nb0 = document.querySelector('.s6-nav button'); if (nb0 && !document.querySelector('.s6-nav button.active')) nb0.classList.add('active')
       }
       function initS6Events() {
         var dec = $('step-dec'), inc = $('step-inc');
@@ -2417,7 +2453,7 @@
         if (scrollEl) {
           scrollEl.addEventListener('scroll', function () {
             var navKeys = ['sec-rsvp', 'sec-gallery', 'sec-contacts', 'sec-faq'];
-            var mid = scrollEl.scrollTop + scrollEl.clientHeight * 0.35, activeId = 'sec-rsvp';
+            var mid = scrollEl.scrollTop + scrollEl.clientHeight * 0.35, activeId = $('sec-rsvp') ? 'sec-rsvp' : 'sec-gallery';
             navKeys.forEach(function (id) { var el = $(id); if (el && el.offsetTop <= mid) { activeId = id } });
             document.querySelectorAll('.s6-nav button').forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-sec') === activeId) })
           }, { passive: true })
@@ -2442,9 +2478,22 @@
         A($('dl'), [{ transform: 'perspective(500px) rotateY(0deg)' }, { transform: 'perspective(500px) rotateY(75deg)' }], { duration: 450, easing: 'ease-in-out', fill: 'both' });
         A($('dr'), [{ transform: 'perspective(500px) rotateY(0deg)' }, { transform: 'perspective(500px) rotateY(-75deg)' }], { duration: 450, easing: 'ease-in-out', fill: 'both' });
         A(w, [{ transform: 'scale(1)' }, { transform: 'scale(1.25)' }], { duration: 450, easing: 'ease-in', fill: 'both' });
-        T(function () { $('s3').classList.add('on'); drift(); $('s2').style.visibility = 'hidden' }, 300); T(function () { $('sf').classList.add('on') }, 2000)
+        T(function () { $('s3').style.visibility = ''; $('s3').classList.add('on'); drift(); $('s2').style.visibility = 'hidden' }, 300); T(function () { $('sf').classList.add('on') }, 2000)
       }
       initS6Events();
+      if ($('pin')) $('pin').href = CFG.MAPS;
+      if ($('cd-cal')) $('cd-cal').href = getCalendarUrl();
+      if ($('map-pill')) $('map-pill').href = CFG.MAPS;
+      if ($('share-wa')) {
+        var shareText = "You're invited to celebrate the wedding of Dr. Hariharan & Dr. Bhavashree! View the invitation here: " + location.href;
+        $('share-wa').href = 'https://wa.me/?text=' + encodeURIComponent(shareText);
+      }
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest('a');
+        if (a && (!a.getAttribute('href') || a.getAttribute('href') === '#')) {
+          e.preventDefault();
+        }
+      });
       window.toS6 = toS6; window.s1 = s1; window.toS5 = toS5;
       $('cp').onclick = toS4; $('bd').onclick = nextEvent; $('nx').onclick = toS5; $('nx5').onclick = toS6; $('tap').onclick = go; $('dh').onclick = enter; $('replay').onclick = s1;
       var imgs = [].slice.call(document.images).map(function (i) { return i.decode ? i.decode().catch(function () { }) : 0 });
