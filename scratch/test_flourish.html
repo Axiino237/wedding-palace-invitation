@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+<style>
+body { background: #1a2418; color: #fff8ef; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; font-family: "Fleur De Leah", cursive; font-weight: 400; font-synthesis: none; }
+.road-preview { position: relative; width: 390px; height: 750px; background: url(../assets/bg.jpg) center/cover no-repeat; overflow: hidden; }
+.L { position: absolute; left: 0; right: 0; display: flex; justify-content: center; transform: translateY(-50%); pointer-events: none; }
+.t { display: block; white-space: nowrap; color: #fff8ef; text-shadow: 0 1px 2px #0009, 0 2px 14px #000b; }
+.sc { line-height: 1.1; }
+.rot-swash {
+  display: inline-flex;
+  align-items: center;
+  transform: rotate(90deg);
+  transform-origin: center center;
+  white-space: nowrap;
+}
+.rot-swash::before,
+.rot-swash::after {
+  content: '';
+  display: inline-block;
+  width: 95px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+  filter: drop-shadow(0 1px 2px #0009) drop-shadow(0 2px 10px #000b);
+}
+.rot-swash::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 30' fill='none'%3E%3Cpath d='M2,15 C45,15 70,8 100,20 C118,27 128,21 138,13' stroke='%23fff8ef' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E");
+  margin-right: 4px;
+  transform: translateY(2px);
+}
+.rot-swash::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 30' fill='none'%3E%3Cpath d='M2,13 C18,22 48,6 85,15 C120,24 142,18 158,15' stroke='%23fff8ef' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E");
+  margin-left: 4px;
+  transform: translateY(2px);
+}
+</style>
+</head>
+<body>
+<div class="road-preview">
+  <div class="L" style="top: 52%;">
+    <span class="t sc rot-swash" style="font-size: 46px;">save the date</span>
+  </div>
+</div>
+</body>
+</html>

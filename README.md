@@ -45,10 +45,10 @@ Open [index.html](index.html) and locate the lines marked `EDIT HERE`:
 You can run a local web server using Python:
 
 ```bash
-python -m http.server 8080
+python -m http.server 8000
 ```
 
-Then open `http://localhost:8080` in your web browser.
+Then open `http://localhost:8000` in your web browser.
 
 ## How to Deploy to GitHub Pages (When Ready)
 
